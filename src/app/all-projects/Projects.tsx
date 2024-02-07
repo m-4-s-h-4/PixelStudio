@@ -1,60 +1,58 @@
-/* eslint-disable @next/next/no-img-element */
-import { gql } from "graphql-request";
-import { client } from "../lib/client";
+"use client";
+
+import { useProjects } from "./useProjects";
 import styles from "./Projects.module.css";
 import Link from "next/link";
 
-type Project = {
-  id: string;
-  title: string;
-  date: string;
-  summary: string;
-  links: {
-    url: string;
-  }[];
-  photos: {
-    url: string;
-  }[];
-  thumbnail: {
-    url: string;
-  };
-  info: string;
-};
-
-type ProjectsQueryResult = {
-  projects: Project[];
-};
-
-const ProjectsQuery = gql`
-  query Projects {
-    projects {
-      title
-      id
-      date
-      thumbnail {
-        url
-      }
-    }
-  }
-`;
-
-export default async function Projects() {
-  const { projects }: ProjectsQueryResult = await client.request(ProjectsQuery);
+export default function Projects() {
+  const {
+    filteredProjects,
+    uniqueSummaries,
+    selectedSummary,
+    setSelectedSummary,
+  } = useProjects();
 
   return (
     <div className={styles.projectList}>
-      {projects.map((project: Project, projectIndex: number) => {
-        return (
-          <div key={projectIndex} className={styles.project}>
+      <div className={styles.summaryContainer}>
+        {/* Filter buttons */}
+        {uniqueSummaries.map((summary) => (
+          <button
+            key={summary}
+            className={`${styles.filterButton} ${
+              selectedSummary === summary ? styles.selectedSummary : ""
+            }`}
+            onClick={() => setSelectedSummary(summary)}
+          >
+            {summary}
+          </button>
+        ))}
+        <button
+          className={styles.filterButton}
+          onClick={() => setSelectedSummary("")}
+        >
+          All
+        </button>
+      </div>
+      {/* Project grid */}
+      <div className={styles.projectGrid}>
+        {filteredProjects.map((project) => (
+          <div key={project.id} className={styles.project}>
             <Link href={`/projects/${project.id}`}>
               <div>
-                <h1>{project.title}</h1>
+                <div className={styles.projectInner}>
+                  <img
+                    src={project.thumbnail.url}
+                    alt={project.title}
+                    className={styles.projectImage}
+                  />
+                  <div className={styles.projectTitle}>{project.title}</div>
+                </div>
               </div>
             </Link>
-            <img src={project.thumbnail.url} alt={project.title} />
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 }

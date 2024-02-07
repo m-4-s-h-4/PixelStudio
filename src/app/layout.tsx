@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import styles from "./Layout.module.css";
 
 export const metadata = {
@@ -12,35 +13,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
+    <>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-      </head>
-      <body>
-        <nav className={styles.navContainer}>
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link href="/" className={styles.linkContainer}>
-                Home
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/all-projects" className={styles.linkContainer}>
-                Projects
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/contact-me" className={styles.linkContainer}>
-                Contact Me
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {children}
-      </body>
-    </html>
+      </Head>
+      <nav className={styles.navContainer}>
+        <ul className={styles.navList}>
+          <li className={styles.navItem}>
+            <Link href="/" passHref>
+              <a className={styles.linkContainer}>Home</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/all-projects" passHref>
+              <a className={styles.linkContainer}>Projects</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/contact-me" passHref>
+              <a className={styles.linkContainer}>Contact Me</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {children}
+    </>
   );
 }

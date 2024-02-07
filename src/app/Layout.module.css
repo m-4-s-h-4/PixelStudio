@@ -1,8 +1,7 @@
 .navContainer {
     display: flex;
     position: fixed;
-    top: 0;
-    left: 40%;
+    left: 42%;
     width: auto; 
     background-color: #f3f3f3eb;
     z-index: 1000;
@@ -19,10 +18,6 @@
     padding: 0;
     margin: 0;
     align-items: center;
-  }
-  
-  .navItem {
-    /* Styles for each nav item if needed later */
   }
   
   .linkContainer {

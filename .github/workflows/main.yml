@@ -25,8 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20.11.0"
-    - name: Run Linter
-          run: ./node_modules/.bin/eslint --fix .
+      - name: Run Linter
+        run: ./node_modules/.bin/eslint --fix .
 
   format:
     name: Check Formatting

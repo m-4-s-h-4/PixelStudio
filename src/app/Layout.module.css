@@ -1,34 +1,33 @@
 .navContainer {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 40%;
-    width: auto; 
-    background-color: #f3f3f3eb;
-    z-index: 1000;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    margin-top: 1rem;
-    border-radius: 20px;
-  }
-  
-  .navList {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-  
-  .navItem {
-    /* Styles for each nav item if needed later */
-  }
-  
-  .linkContainer {
-    padding: 5px 10px;
-    text-decoration: none; 
-    color: black;
-    display: block;
-  }
-  
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: auto;
+  background-color: #f3f3f3eb;
+  z-index: 1000;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navItem {
+  /* Styles for each nav item if needed later */
+}
+
+.linkContainer {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}

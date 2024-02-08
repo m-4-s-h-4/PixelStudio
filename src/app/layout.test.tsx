@@ -1,5 +1,8 @@
-import { expect, test } from "vitest";
+import { expect, test, vi } from "vitest";
+vi.mock("next/navigation", () => require("next-router-mock"));
+
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import RootLayout from "./layout";
 
 test("Layout navigation links", () => {
@@ -9,7 +12,7 @@ test("Layout navigation links", () => {
     </RootLayout>,
   );
 
-  console.log(document.body.innerHTML);
+  // console.log(document.body.innerHTML);
 
   // home link
   const homeLink = screen.getByRole("link", { name: "Home" });
@@ -25,4 +28,6 @@ test("Layout navigation links", () => {
   const contactLink = screen.getByRole("link", { name: "Contact Me" });
   expect(contactLink).toBeDefined();
   expect(contactLink.getAttribute("href")).toBe("/contact-me");
+  userEvent.click(contactLink);
+  screen.debug();
 });

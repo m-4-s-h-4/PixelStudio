@@ -4,30 +4,38 @@
   top: 0;
   left: 40%;
   width: auto;
-  background-color: #f3f3f3eb;
   z-index: 1000;
-  padding: 10px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--lower-opacity-color-dark);
   margin-top: 1rem;
-  border-radius: 20px;
+  border-radius: 65px;
 }
+
+.navContainer.light-mode {
+  background-color: var(--lower-opacity-color-light); 
+}
+
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   padding: 0;
   margin: 0;
   align-items: center;
 }
 
-.navItem {
-  /* Styles for each nav item if needed later */
-}
 
 .linkContainer {
   padding: 5px 10px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color-light); 
   display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .linkContainer {
+    color: var(--text-color-dark);
+  }
 }

@@ -95,3 +95,113 @@
 .show {
   display: block;
 }
+
+/* Tablet screens */
+@media (max-width: 1660px) {
+  .projectsTitleContainer {
+    font-size: 7.5rem;
+    margin-left: 2rem;
+  }
+
+  .numberBehind {
+    font-size: 15rem;
+    top: -10rem;
+    left: 15rem;
+  }
+
+  .contactNote {
+    font-size: 1.2rem;
+    width: 20rem;
+  }
+
+  .projectImage {
+    width: 60rem;
+    height: 34rem;
+  }
+
+  .projectList, .summaryContainer, .projectsRightSide {
+    width: auto;
+  }
+
+  .filterMenu, .filterDropdown {
+    font-size: 12px;
+  }
+}
+
+/* Smaller tablet screens */
+@media (max-width: 1230px) {
+  .projectsTitleContainer {
+    font-size: 6rem;
+    margin-left: 1.5rem;
+  }
+
+  .numberBehind {
+    display: none;
+  }
+
+  .projectImage {
+    width: 50rem;
+    height: 28rem;
+  }
+
+  .summaryContainer, .projectsRightSide {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* Phone screens */
+@media (max-width: 1060px) {
+  .projectsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summaryContainer{
+    order: 1;
+  }
+
+  .projectList {
+    order: 2;
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    margin: 0.5rem;
+  }
+
+  .projectsTitleContainer {
+    position: static;
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+
+  .numberBehind {
+    display: none;
+  }
+
+  .contactNote {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .summaryContainer, .projectsRightSide {
+    width: 100%;
+  }
+  
+  .projectsRightSide {
+    margin-top: 3rem;
+  }
+
+  .project {
+    margin-bottom: 0.5rem;
+  }
+
+  .projectImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .filterMenu, .filterDropdown {
+    width: 100%;
+  }
+}

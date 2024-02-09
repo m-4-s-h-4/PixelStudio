@@ -31,9 +31,9 @@ export default function Projects() {
       </div>
       <div className={styles.projectsRightSide}>
       <div className={styles.projectsTitleContainer}>
-        <ProjectNumber currentIndex={currentIndex} className={styles.numberBehind} /> {/* Dynamic number */}
-        <div className={styles.projectsTitle}>Projects</div> {/* Title */}
-        <div className={styles.contactNote}>Can't find exactly what you're looking for? Reach out to craft something uniquely yours.</div> {/* Title */}
+        <ProjectNumber currentIndex={currentIndex} className={styles.numberBehind} /> 
+        <div className={styles.projectsTitle}>Projects</div> 
+        <div className={styles.contactNote}>Can not find exactly what you are looking for? Reach out to craft something uniquely yours.</div> 
         </div>
         <div className={styles.filterMenu}>
           <button className={styles.filterButton} onClick={toggleFilterDropdown}>Filter</button>

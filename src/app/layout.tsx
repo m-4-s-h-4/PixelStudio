@@ -1,7 +1,7 @@
 import Link from "next/link";
 import './global.css';
 import styles from "./Layout.module.css";
-import { ThemeSwitcher } from "./components/theme-switcher";
+import { ThemeSwitcher } from "./components/theme-switcher/theme-switcher";
 
 export const metadata = {
   title: "Next.js",

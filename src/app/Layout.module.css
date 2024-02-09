@@ -2,20 +2,22 @@
   display: flex;
   position: fixed;
   top: 0;
-  left: 40%;
-  width: auto;
+  left: 50%; 
+  transform: translateX(-50%); 
   z-index: 1000;
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--lower-opacity-color); /* Use the CSS variable */
+  background-color: var(--lower-opacity-color);
   margin-top: 1rem;
   border-radius: 65px;
+  white-space: nowrap;
 }
+
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
   padding: 0;
   margin: 0;
   align-items: center;

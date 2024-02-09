@@ -35,8 +35,8 @@ export default function RootLayout({
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/contact-me" className={styles.linkContainer}>
-                Contact Me
+              <Link href="/reach-out" className={styles.linkContainer}>
+              Reach Out
               </Link>
             </li>
           </ul>

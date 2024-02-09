@@ -7,15 +7,10 @@
   z-index: 1000;
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--lower-opacity-color-dark);
+  background-color: var(--lower-opacity-color); /* Use the CSS variable */
   margin-top: 1rem;
   border-radius: 65px;
 }
-
-.navContainer.light-mode {
-  background-color: var(--lower-opacity-color-light); 
-}
-
 
 .navList {
   list-style: none;
@@ -26,16 +21,9 @@
   align-items: center;
 }
 
-
 .linkContainer {
   padding: 5px 10px;
   text-decoration: none;
-  color: var(--text-color-light); 
+  color: var(--text-color); 
   display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  .linkContainer {
-    color: var(--text-color-dark);
-  }
 }

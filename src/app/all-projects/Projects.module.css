@@ -1,3 +1,31 @@
+.projectsTitleContainer {
+  position: relative;
+  font-size: 10rem;
+  font-weight: 500;
+  margin-left: 6rem;
+}
+
+.numberBehind {
+  position: absolute;
+  z-index: -1;
+  top: -13rem;
+  left: 20rem;
+  font-size: 20rem;
+  font-weight: 700;
+  color: var(--lower-opacity-color);
+}
+
+.contactNote {
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  width: 25rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
 .projectList {
   display: flex;
   width: calc(100% - 10rem);
@@ -13,6 +41,7 @@
   padding-right: 1rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .summaryContainer::-webkit-scrollbar {
@@ -25,11 +54,6 @@
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
-}
-
-.projectsTitle {
-  font-size: 128px;
-  margin-left: 6rem; 
 }
 
 .projectImage {
@@ -47,35 +71,27 @@
   cursor: pointer;
 }
 
-/* Use dark mode color by default, as per the corrected theme setup */
 .filterDropdown {
   display: none;
   position: absolute;
-  background-color: var(--lower-opacity-color-dark); /* Dark mode background color */
-  min-width: 120px; /* Adjusted to make the dropdown smaller */
+  background-color: var(--lower-opacity-color);
+  min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  font-size: 14px; /* Smaller text size for the dropdown items */
-}
-
-/* Switch to light mode colors when light mode is preferred */
-@media (prefers-color-scheme: light) {
-  .filterDropdown {
-    background-color: var(--lower-opacity-color-light); /* Light mode background color */
-  }
+  font-size: 14px;
 }
 
 .filterDropdown a {
-  color: black; /* Consider adjusting this color to improve contrast based on the theme */
-  padding: 8px 12px; /* Smaller padding for a more compact layout */
+  color: var(--text-color);
+  padding: 8px 12px;
   text-decoration: none;
   display: block;
 }
 
 .filterDropdown a:hover {
-  background-color: #f1f1f1; /* Hover background color for dropdown items */
+  background-color: var(--bg-color);
 }
 
 .show {
-  display: block; /* Shows the dropdown menu when the filter button is clicked */
+  display: block;
 }

@@ -25,9 +25,9 @@ test("Layout navigation links", () => {
   expect(projectsLink.getAttribute("href")).toBe("/all-projects");
 
   // contact me link
-  const contactLink = screen.getByRole("link", { name: "Contact Me" });
+  const contactLink = screen.getByRole("link", { name: "Reach Out" });
   expect(contactLink).toBeDefined();
-  expect(contactLink.getAttribute("href")).toBe("/contact-me");
+  expect(contactLink.getAttribute("href")).toBe("/reach-out");
   userEvent.click(contactLink);
   screen.debug();
 });

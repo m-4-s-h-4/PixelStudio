@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Layout.module.css";
+import { ThemeSwitcher } from "../theme-swticher";
 
 export const metadata = {
   title: "Next.js",
@@ -40,6 +41,7 @@ export default function RootLayout({
           </ul>
         </nav>
         {children}
+        <ThemeSwitcher />
       </body>
     </html>
   );

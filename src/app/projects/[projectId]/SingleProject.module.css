@@ -90,6 +90,7 @@
   .sliderContainer {
     width: 100%;
     height: auto;
+    order: 2; 
   }
 
   .sliderImage {

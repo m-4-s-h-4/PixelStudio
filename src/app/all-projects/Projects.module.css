@@ -20,6 +20,7 @@
   font-weight: 300;
   display: flex;
   width: 25rem;
+  margin-top: 0.5rem;
 }
 
 .project {
@@ -57,7 +58,7 @@
 }
 
 .projectImage {
-  width: 70rem;
+  width: 45rem;
   height: 40rem;
   object-fit: cover;
 }
@@ -171,7 +172,7 @@
 
   .projectsTitleContainer {
     position: static;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 2rem 0;
   }
 

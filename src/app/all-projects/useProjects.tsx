@@ -9,16 +9,9 @@ export type Project = {
   title: string;
   date: string;
   summary: string[];
-  links: {
-    url: string;
-  }[];
-  photos: {
-    url: string;
-  }[];
   thumbnail: {
     url: string;
   };
-  info: string;
 };
 
 type ProjectsQueryResult = {
@@ -30,7 +23,6 @@ const ProjectsQuery = gql`
     projects {
       id
       title
-      date
       thumbnail {
         url
       }

@@ -33,7 +33,7 @@ export default function Projects() {
       <div className={styles.projectsTitleContainer}>
         <ProjectNumber currentIndex={currentIndex} className={styles.numberBehind} /> 
         <div className={styles.projectsTitle}>Projects</div> 
-        <div className={styles.contactNote}>Can not find exactly what you are looking for? Reach out to craft something uniquely yours.</div> 
+        <div className={styles.contactNote}>Can not find exactly what you are looking for? Reach out to craft something uniquely yours.</div> {/* Title */}
         </div>
         <div className={styles.filterMenu}>
           <button className={styles.filterButton} onClick={toggleFilterDropdown}>Filter</button>

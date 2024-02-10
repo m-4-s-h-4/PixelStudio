@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { gql } from "graphql-request";
 import { client } from "../../lib/client";
+import Slider from '../../components/Slider/Slider'; 
+import styles from './SingleProject.module.css'; 
 
 type ProjectParam = {
   params: { projectId: string };
@@ -17,6 +19,9 @@ interface ProjectDetails {
   photos: {
     url: string;
   }[];
+  slider: {
+    url: string;
+  }[]; 
   thumbnail: {
     url: string;
   };
@@ -35,6 +40,9 @@ const GET_PROJECT_DETAILS = gql`
       photos {
         url
       }
+      slider {
+        url
+      }
       thumbnail {
         url
       }
@@ -42,42 +50,35 @@ const GET_PROJECT_DETAILS = gql`
   }
 `;
 
+
 async function page({ params: { projectId } }: ProjectParam) {
   const { project } = await client.request<{ project: ProjectDetails }>(
     GET_PROJECT_DETAILS,
     { projectId },
   );
 
-  const { summary, links, date, photos } = project;
+  const { summary, links, date, photos, slider } = project; 
 
   return (
-    <div>
-      <div>
-        <h1>Title: {project.title}</h1>
-        <p>Information: {project.info}</p>
-        <p>Summary: {summary}</p>
-        <p>Date: {date}</p>
-        <div>
-          <h2>Links:</h2>
-          <ul>
+    <div className={styles.projectLayout}>
+      <div className={styles.sliderContainer}>
+        <Slider images={slider} />
+        <div className={styles.belowSlider}>
+          <div className={styles.photoContainer}>
+            <img src={photos[0]?.url} alt="Featured" />
+          </div>
+          <div className={styles.infoContainer}>
+            <p>{summary}</p>
+            <p>{date}</p>
             {links.map((link, index) => (
-              <li key={index}>
-                <a href={link.url}>{link.url}</a>
-              </li>
+              <a key={index} href={link.url}>{link.url}</a>
             ))}
-          </ul>
+          </div>
         </div>
-        <div>
-          <h2>Photos:</h2>
-          {photos.map((photo, index) => (
-            <img
-              key={index}
-              src={photo.url}
-              alt={`Photo ${index}`}
-              style={{ height: "200px", objectFit: "cover" }}
-            />
-          ))}
-        </div>
+      </div>
+      <div className={styles.rightSideContent}>
+        <h1 className={styles.projectsTitleContainer}>{project.title}</h1>
+        <p className={styles.info}>{project.info}</p>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import styles from './Slider.module.css';
+import React, { useState, useEffect } from "react";
+import styles from "./Slider.module.css";
 
 interface Image {
   url: string;
@@ -27,7 +27,7 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
+          className={`${styles.slide} ${index === currentIndex ? styles.active : ""}`}
         >
           <img
             className={styles.sliderImage}

@@ -1,13 +1,15 @@
 interface ProjectNumberProps {
   currentIndex: number;
-  className:any;
+  className: any;
 }
 
-const ProjectNumber: React.FC<ProjectNumberProps> = ({ currentIndex, className  }) => {
+const ProjectNumber: React.FC<ProjectNumberProps> = ({
+  currentIndex,
+  className,
+}) => {
+  const formattedIndex = `${currentIndex + 1}`.padStart(2, "0");
 
-  const formattedIndex = `${currentIndex + 1}`.padStart(2, '0');
-
-  return <span className={className}>{formattedIndex}</span>; 
+  return <span className={className}>{formattedIndex}</span>;
 };
 
 export default ProjectNumber;

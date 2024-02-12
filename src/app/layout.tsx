@@ -1,5 +1,5 @@
 import Link from "next/link";
-import './global.css';
+import "./global.css";
 import styles from "./Layout.module.css";
 import { ThemeSwitcher } from "./components/theme-switcher/theme-switcher";
 
@@ -36,7 +36,7 @@ export default function RootLayout({
             </li>
             <li className={styles.navItem}>
               <Link href="/reach-out" className={styles.linkContainer}>
-              Reach Out
+                Reach Out
               </Link>
             </li>
           </ul>

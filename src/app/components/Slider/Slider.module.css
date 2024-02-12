@@ -1,36 +1,35 @@
 .sliderContainer {
-    width: 45rem;
-    height: 40rem;
-  }
-  
-  .sliderImage {
-    width: 45rem;
-    height: 40rem;
-    object-fit: cover;
-  }
-  
-  .slide {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .active {
-    opacity: 1;
-  }
+  width: 45rem;
+  height: 40rem;
+}
 
+.sliderImage {
+  width: 45rem;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
 
 @media (max-width: 768px) {
   .sliderContainer {
     max-width: 98%;
     height: 30rem;
   }
-  
+
   .sliderImage {
     max-width: 98%;
     height: 30rem;
   }
-  .slider{
+  .slider {
     max-width: 98%;
   }
 }

@@ -1,39 +1,38 @@
-@import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+@import url("https://fonts.cdnfonts.com/css/tt-norms-pro");
 
 :root {
-    --text-color-dark: #E8E8E8;
-    --lower-opacity-color-dark: rgba(71, 71, 71, 0.8);
-    --bg-color-dark: #282828;
-    
-    --text-color-light: #474747;
-    --lower-opacity-color-light: rgba(184, 174, 167, 0.8);
-    --bg-color-light: #F1E5DC;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'TT Norms Pro', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    overflow-x:hidden;
-    width: 100%;
-  }
-  
-  .dark-theme {
-    --text-color: var(--text-color-dark);
-    --lower-opacity-color: var(--lower-opacity-color-dark);
-    --bg-color: var(--bg-color-dark);
-  }
-  
-  .light-theme {
-    --text-color: var(--text-color-light);
-    --lower-opacity-color: var(--lower-opacity-color-light);
-    --bg-color: var(--bg-color-light);
-  }
-  
-  body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
-  }
+  --text-color-dark: #e8e8e8;
+  --lower-opacity-color-dark: rgba(71, 71, 71, 0.8);
+  --bg-color-dark: #282828;
 
+  --text-color-light: #474747;
+  --lower-opacity-color-light: rgba(184, 174, 167, 0.8);
+  --bg-color-light: #f1e5dc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.dark-theme {
+  --text-color: var(--text-color-dark);
+  --lower-opacity-color: var(--lower-opacity-color-dark);
+  --bg-color: var(--bg-color-dark);
+}
+
+.light-theme {
+  --text-color: var(--text-color-light);
+  --lower-opacity-color: var(--lower-opacity-color-light);
+  --bg-color: var(--bg-color-light);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}

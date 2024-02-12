@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { gql } from "graphql-request";
 import { client } from "../../lib/client";
-import Slider from '../../components/Slider/Slider'; 
-import styles from './SingleProject.module.css'; 
+import Slider from "../../components/Slider/Slider";
+import styles from "./SingleProject.module.css";
 
 type ProjectParam = {
   params: { projectId: string };
@@ -21,7 +21,7 @@ interface ProjectDetails {
   }[];
   slider: {
     url: string;
-  }[]; 
+  }[];
   thumbnail: {
     url: string;
   };
@@ -50,14 +50,13 @@ const GET_PROJECT_DETAILS = gql`
   }
 `;
 
-
 async function page({ params: { projectId } }: ProjectParam) {
   const { project } = await client.request<{ project: ProjectDetails }>(
     GET_PROJECT_DETAILS,
     { projectId },
   );
 
-  const { summary, links, date, photos, slider } = project; 
+  const { summary, links, date, photos, slider } = project;
 
   return (
     <div className={styles.projectLayout}>
@@ -71,7 +70,9 @@ async function page({ params: { projectId } }: ProjectParam) {
             <p>{summary}</p>
             <p>{date}</p>
             {links.map((link, index) => (
-              <a key={index} href={link.url}>{link.url}</a>
+              <a key={index} href={link.url}>
+                {link.url}
+              </a>
             ))}
           </div>
         </div>

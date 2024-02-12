@@ -15,8 +15,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Run Linter
-        run: npm run
-
+        run: npm run lint
   format:
     name: Check Formatting
     runs-on: ubuntu-latest
@@ -29,7 +28,7 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
       - name: Check Formatting
-        run: npm run format
+        run: npm run format:check
 
   test:
     name: Run Tests

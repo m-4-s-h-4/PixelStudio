@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./theme-switcher.module.css"; 
+import styles from "./theme-switcher.module.css";
 
 export const ThemeSwitcher = () => {
   const [themeState, setThemeState] = useState(0);

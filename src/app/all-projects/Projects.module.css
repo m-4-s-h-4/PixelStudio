@@ -68,7 +68,8 @@
   display: inline-block;
 }
 
-.filterButton, .filterDropdown {
+.filterButton,
+.filterDropdown {
   cursor: pointer;
 }
 
@@ -77,7 +78,7 @@
   position: absolute;
   background-color: var(--lower-opacity-color);
   min-width: 120px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 14px;
 }
@@ -105,9 +106,7 @@
   }
 
   .numberBehind {
-    font-size: 15rem;
-    top: -10rem;
-    left: 15rem;
+    display: none;
   }
 
   .contactNote {
@@ -116,15 +115,18 @@
   }
 
   .projectImage {
-    width: 60rem;
-    height: 34rem;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
-  .projectList, .summaryContainer, .projectsRightSide {
+  .projectList,
+  .summaryContainer,
+  .projectsRightSide {
     width: auto;
   }
 
-  .filterMenu, .filterDropdown {
+  .filterMenu,
+  .filterDropdown {
     font-size: 12px;
   }
 }
@@ -145,7 +147,8 @@
     height: 28rem;
   }
 
-  .summaryContainer, .projectsRightSide {
+  .summaryContainer,
+  .projectsRightSide {
     padding: 0;
     width: 100%;
   }
@@ -158,7 +161,7 @@
     flex-direction: column;
   }
 
-  .summaryContainer{
+  .summaryContainer {
     order: 1;
   }
 
@@ -185,10 +188,11 @@
     margin-bottom: 1rem;
   }
 
-  .summaryContainer, .projectsRightSide {
+  .summaryContainer,
+  .projectsRightSide {
     width: 100%;
   }
-  
+
   .projectsRightSide {
     margin-top: 3rem;
   }
@@ -202,7 +206,8 @@
     height: auto;
   }
 
-  .filterMenu, .filterDropdown {
+  .filterMenu,
+  .filterDropdown {
     width: 100%;
   }
 }

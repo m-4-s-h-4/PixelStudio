@@ -1,6 +1,6 @@
 interface ProjectNumberProps {
   currentIndex: number;
-  className: any;
+  className: string;
 }
 
 const ProjectNumber: React.FC<ProjectNumberProps> = ({

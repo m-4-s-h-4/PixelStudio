@@ -1,6 +1,6 @@
 .projectsTitleContainer {
   position: relative;
-  font-size: 10rem;
+  font-size: var(--title-desktop);
   font-weight: 500;
   margin-left: 6rem;
 }
@@ -16,7 +16,7 @@
 }
 
 .contactNote {
-  font-size: 1.5rem;
+  font-size: var(--text-desktop);
   font-weight: 300;
   display: flex;
   width: 25rem;
@@ -101,7 +101,7 @@
 /* Tablet screens */
 @media (max-width: 1660px) {
   .projectsTitleContainer {
-    font-size: 7.5rem;
+    font-size: var(--title-tablet);
     margin-left: 2rem;
   }
 
@@ -110,7 +110,7 @@
   }
 
   .contactNote {
-    font-size: 1.2rem;
+    font-size: var(--text-tablet);
     width: 20rem;
   }
 
@@ -134,7 +134,6 @@
 /* Smaller tablet screens */
 @media (max-width: 1230px) {
   .projectsTitleContainer {
-    font-size: 6rem;
     margin-left: 1.5rem;
   }
 
@@ -154,7 +153,7 @@
   }
 }
 
-/* Phone screens */
+/* Phone screens TO ADD FONT SIZE LARGER UNTIL 485*/
 @media (max-width: 1060px) {
   .projectsContainer {
     display: flex;
@@ -175,7 +174,7 @@
 
   .projectsTitleContainer {
     position: static;
-    font-size: 4rem;
+    font-size: var(--title-tablet);
     margin: 2rem 0;
   }
 
@@ -209,5 +208,13 @@
   .filterMenu,
   .filterDropdown {
     width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .projectsTitleContainer {
+    position: static;
+    font-size: var(--title-phone);
+    margin: 2rem 0;
   }
 }

@@ -15,14 +15,14 @@
 }
 
 .projectsTitleContainer {
-  font-size: 10rem;
+  font-size: var(--title-desktop);
   font-weight: 500;
   margin-top: 16rem;
   margin-bottom: 0;
 }
 
 .info {
-  font-size: 1.5rem;
+  font-size: var(--text-desktop);
   font-weight: 300;
   display: flex;
   width: 25rem;
@@ -71,12 +71,12 @@
 
   .projectsTitleContainer,
   .info {
-    font-size: 5rem;
+    font-size: var(--title-phone);
     margin-top: 5rem;
   }
 
   .info {
-    font-size: 1.2rem;
+    font-size: var(--text-phone);
     margin-top: 1rem;
     width: 100%;
     justify-content: center;

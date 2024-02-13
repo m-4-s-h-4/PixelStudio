@@ -112,3 +112,19 @@
     font-size: 4rem;
   }
 }
+
+.wordBox {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px 15px;
+  border: 2px solid var(--text-color); /* Adjust color as needed */
+  border-radius: 15px; /* Optional, for rounded corners */
+}
+
+.linkStyle {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px;
+  color: var(--text-color); /* Standard link color */
+  text-decoration: none; /* Remove underline from links */
+}

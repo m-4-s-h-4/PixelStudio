@@ -1,12 +1,12 @@
 @import url("https://fonts.cdnfonts.com/css/tt-norms-pro");
 
 :root {
-/* dark pallete */
-  --text-color-dark: #e8e8e8;
+  /* dark pallete */
+  --text-color-dark: #dcdcdc;
   --lower-opacity-color-dark: rgba(71, 71, 71, 0.8);
   --bg-color-dark: #282828;
-  
-/* light pallete */
+
+  /* light pallete */
   --text-color-light: #474747;
   --lower-opacity-color-light: rgba(184, 174, 167, 0.8);
   --bg-color-light: #f1e5dc;

@@ -58,6 +58,8 @@ async function page({ params: { projectId } }: ProjectParam) {
 
   const { summary, links, date, photos, slider } = project;
 
+  console.log(typeof summary, summary);
+
   return (
     <div className={styles.projectLayout}>
       <div className={styles.sliderContainer}>
@@ -67,10 +69,15 @@ async function page({ params: { projectId } }: ProjectParam) {
             <img src={photos[0]?.url} alt="Featured" />
           </div>
           <div className={styles.infoContainer}>
-            <p>{summary}</p>
-            <p>{date}</p>
+            <p>
+              {summary.map((word, index) => (
+                <span key={index} className={styles.wordBox}>
+                  {word}
+                </span>
+              ))}
+            </p>
             {links.map((link, index) => (
-              <a key={index} href={link.url}>
+              <a key={index} href={link.url} className={styles.linkStyle}>
                 {link.url}
               </a>
             ))}

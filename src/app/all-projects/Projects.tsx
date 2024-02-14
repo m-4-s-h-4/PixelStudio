@@ -3,16 +3,15 @@
 
 import { useState } from "react";
 import { useProjects } from "./useProjects";
+import ProjectsFilter from "../components/ProjectsFilter/ProjectsFilter";
 import styles from "./Projects.module.css";
 import Link from "next/link";
 import ProjectNumber from "../components/ProjectNumber/ProjectNumber";
+
 export default function Projects() {
   const { filteredProjects, uniqueSummaries, setSelectedSummary } =
     useProjects();
-  const [showFilter, setShowFilter] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const toggleFilterDropdown = () => setShowFilter(!showFilter);
 
   const updateCurrentIndex = (newIndex: number) => {
     setCurrentIndex(newIndex);
@@ -41,46 +40,21 @@ export default function Projects() {
       </div>
       <div className={styles.projectsRightSide}>
         <div className={styles.projectsTitleContainer}>
+          {" "}
+          <div className={styles.projectsTitleFlex}>
+            <div className={styles.projectsTitle}>Projects</div>
+            <ProjectsFilter
+              uniqueSummaries={uniqueSummaries}
+              setSelectedSummary={setSelectedSummary}
+            />
+          </div>
           <ProjectNumber
             currentIndex={currentIndex}
             className={styles.numberBehind}
           />
-          <div className={styles.projectsTitle}>Projects</div>
           <div className={styles.contactNote}>
             Can not find exactly what you are looking for? Reach out to craft
             something uniquely yours.
-          </div>{" "}
-          {/* Title */}
-        </div>
-        <div className={styles.filterMenu}>
-          <button
-            className={styles.filterButton}
-            onClick={toggleFilterDropdown}
-          >
-            Filter
-          </button>
-          <div
-            className={`${styles.filterDropdown} ${showFilter ? styles.show : ""}`}
-          >
-            {uniqueSummaries.map((summary) => (
-              <a
-                key={summary}
-                onClick={() => {
-                  setSelectedSummary(summary);
-                  setShowFilter(false);
-                }}
-              >
-                {summary}
-              </a>
-            ))}
-            <a
-              onClick={() => {
-                setSelectedSummary("");
-                setShowFilter(false);
-              }}
-            >
-              All
-            </a>
           </div>
         </div>
       </div>

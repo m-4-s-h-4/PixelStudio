@@ -70,13 +70,14 @@ async function page({ params: { projectId } }: ProjectParam) {
           </div>
           <div className={styles.infoContainer}>
             <p>
-              {summary.map((word: string, index: number) => (
-                <span key={index} className={styles.wordBox}>
-                  {word}
-                </span>
-              ))}
+              {Array.isArray(summary)
+                ? summary.map((word: string, index: number) => (
+                    <span key={index} className={styles.wordBox}>
+                      {word}
+                    </span>
+                  ))
+                : summary}
             </p>
-
             {links.map((link, index) => (
               <a key={index} href={link.url} className={styles.linkStyle}>
                 {link.url}

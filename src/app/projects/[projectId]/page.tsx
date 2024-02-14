@@ -58,8 +58,6 @@ async function page({ params: { projectId } }: ProjectParam) {
 
   const { summary, links, date, photos, slider } = project;
 
-  console.log(typeof summary, summary);
-
   return (
     <div className={styles.projectLayout}>
       <div className={styles.sliderContainer}>
@@ -78,11 +76,19 @@ async function page({ params: { projectId } }: ProjectParam) {
                   ))
                 : summary}
             </p>
-            {links.map((link, index) => (
-              <a key={index} href={link.url} className={styles.linkStyle}>
-                {link.url}
-              </a>
-            ))}
+            {links.map((link, index) => {
+              let linkText = "";
+              if (index === 0) {
+                linkText = "Link to GitHub";
+              } else if (index === 1) {
+                linkText = "Link to Website";
+              }
+              return (
+                <a key={index} href={link.url} className={styles.linkStyle}>
+                  {linkText || link.url}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

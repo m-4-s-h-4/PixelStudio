@@ -11,7 +11,7 @@ type ProjectParam = {
 interface ProjectDetails {
   title: string;
   info: string;
-  summary: string;
+  summary: string[];
   links: {
     url: string;
   }[];
@@ -70,12 +70,13 @@ async function page({ params: { projectId } }: ProjectParam) {
           </div>
           <div className={styles.infoContainer}>
             <p>
-              {summary.map((word, index) => (
+              {summary.map((word: string, index: number) => (
                 <span key={index} className={styles.wordBox}>
                   {word}
                 </span>
               ))}
             </p>
+
             {links.map((link, index) => (
               <a key={index} href={link.url} className={styles.linkStyle}>
                 {link.url}

@@ -116,7 +116,7 @@
   display: inline-block;
   margin: 2px;
   padding: 5px 15px;
-  border: 2px solid var(--text-color); 
+  border: 2px solid var(--text-color);
   border-radius: 15px;
 }
 
@@ -124,6 +124,6 @@
   display: inline-block;
   margin: 2px;
   padding: 5px;
-  color: var(--text-color); 
-  text-decoration: none; 
+  color: var(--text-color);
+  text-decoration: none;
 }

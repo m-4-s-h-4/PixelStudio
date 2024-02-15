@@ -7,6 +7,7 @@ This portfolio showcases projects from our creative studio, built using Next.js 
 ## Links
 
 - **Deployed App:** [use this link](pixel-studio-psi.vercel.app)
+- **Deployed Storybook:** [use this link](https://pixel-studio-storybook.vercel.app)
 
 ## Installation
 
@@ -85,3 +86,28 @@ yarn test
 ```
 
 This command runs the test suite configured with Vitest and provides you with the test results.
+
+## Running Storybook
+
+To run Storybook locally and view your components in an isolated environment, execute the following command:
+
+```bash
+npm run storybook
+```
+
+```bash
+yarn storybook
+```
+
+This will start Storybook in development mode, available at http://localhost:6006
+
+## Build Storybook
+
+```bash
+npm run build-storybook
+
+```
+
+```bash
+yarn build-storybook
+```

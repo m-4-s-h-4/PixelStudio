@@ -6,7 +6,8 @@ This portfolio showcases projects from our creative studio, built using Next.js 
 
 ## Links
 
-- **Deployed App:** [use this link](pixel-studio-psi.vercel.app)
+- **Deployed App:** [use this link](https://pixel-studio-psi.vercel.app/)
+
 - **Deployed Storybook:** [use this link](https://pixel-studio-storybook.vercel.app)
 
 ## Installation

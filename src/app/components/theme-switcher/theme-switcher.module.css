@@ -6,11 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--lower-opacity-color-dark);
+  background-color: var(--lower-opacity-color);
   font-size: 24px;
   cursor: pointer;
-}
-
-.light-mode {
-  background-color: var(--lower-opacity-color-light);
 }

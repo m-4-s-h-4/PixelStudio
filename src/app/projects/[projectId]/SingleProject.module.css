@@ -103,7 +103,7 @@
   }
 
   .rightSideContent {
-    margin-left: 3rem;
+    margin-left: 0.5rem;
   }
 
   .info {
@@ -125,7 +125,7 @@
 
   .projectsTitleContainer,
   .info {
-    font-size: var(--title-phone);
+    font-size: var(--title-tablet);
     margin-top: 5rem;
   }
 
@@ -147,6 +147,6 @@
   }
 
   .projectsTitleContainer {
-    font-size: 4rem;
+    font-size: var(--title-phone);
   }
 }

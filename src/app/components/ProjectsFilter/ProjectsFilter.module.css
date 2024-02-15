@@ -13,10 +13,10 @@
   display: none;
   position: absolute;
   background-color: var(--lower-opacity-color);
-  min-width: 160px;
+  min-width: 100px;
   z-index: 1;
   border-radius: 5px;
-  font-size: var(--text-tablet);
+  font-size: var(--text-phone);
 }
 
 .filterDropdown a {
@@ -33,9 +33,3 @@
 .show {
   display: block;
 }
-
-/* @media (max-width: 768px) {
-    .filterDropdown {
-      font-size: var(--text-mobile); 
-    }
-  } */

@@ -7,9 +7,9 @@
 
 .projectsTitleFlex {
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between the title and the filter button */
-  width: 100%; /* Take full width of the container */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .numberBehind {

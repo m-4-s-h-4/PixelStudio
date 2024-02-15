@@ -28,7 +28,6 @@
   margin-top: 0.5rem;
 }
 
-
 .rightSideContent {
   flex: 30%;
   margin-left: 6rem;
@@ -74,19 +73,18 @@
   text-decoration: none;
 }
 
-
-@media (max-width: 1615px){
+@media (max-width: 1615px) {
   .projectLayout {
     margin: 0 2rem;
   }
 
-  .projectsTitleContainer{
+  .projectsTitleContainer {
     margin-top: 4rem;
   }
 
   .rightSideContent {
     margin-left: 2rem;
-    order:1;
+    order: 1;
   }
 
   .sliderContainer {
@@ -99,7 +97,7 @@
   }
 }
 
-@media (max-width: 1613px){
+@media (max-width: 1613px) {
   .projectLayout {
     margin: 0 3rem;
   }

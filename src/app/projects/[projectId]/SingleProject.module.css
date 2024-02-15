@@ -28,9 +28,6 @@
   margin-top: 0.5rem;
 }
 
-.sliderContainer {
-  flex: 20%;
-}
 
 .rightSideContent {
   flex: 30%;
@@ -61,7 +58,48 @@
   object-fit: cover;
 }
 
-@media (max-width: 1613px) and (min-width: 800px) {
+.wordBox {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px 15px;
+  border: 2px solid var(--text-color);
+  border-radius: 15px;
+}
+
+.linkStyle {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+
+@media (max-width: 1615px){
+  .projectLayout {
+    margin: 0 2rem;
+  }
+
+  .projectsTitleContainer{
+    margin-top: 4rem;
+  }
+
+  .rightSideContent {
+    margin-left: 2rem;
+    order:1;
+  }
+
+  .sliderContainer {
+    order: 2;
+  }
+
+  .photoContainer,
+  .infoContainer {
+    height: auto;
+  }
+}
+
+@media (max-width: 1613px){
   .projectLayout {
     margin: 0 3rem;
   }
@@ -71,13 +109,7 @@
   }
 
   .info {
-    width: 22rem;
-  }
-
-  .sliderContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 40rem;
   }
 
   .photoContainer,
@@ -87,37 +119,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .projectLayout {
-    margin: 0 3rem;
-  }
-
-  .rightSideContent,
-  .sliderContainer,
-  .belowSlider {
-    flex-basis: 100%;
-  }
-
-  .sliderContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .photoContainer,
-  .infoContainer {
-    width: 50%;
-    height: auto;
-  }
-
-  .info {
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .projectLayout {
     flex-direction: column;
@@ -147,39 +148,7 @@
     order: 1;
   }
 
-  .sliderContainer {
-    width: 100%;
-    height: auto;
-    order: 2;
-  }
-
-  .sliderImage {
-    width: 100%;
-    height: auto;
-  }
-
-  .slide {
-    width: 100%;
-    height: auto;
-  }
-
   .projectsTitleContainer {
     font-size: 4rem;
   }
-}
-
-.wordBox {
-  display: inline-block;
-  margin: 2px;
-  padding: 5px 15px;
-  border: 2px solid var(--text-color);
-  border-radius: 15px;
-}
-
-.linkStyle {
-  display: inline-block;
-  margin: 2px;
-  padding: 5px;
-  color: var(--text-color);
-  text-decoration: none;
 }

@@ -1,9 +1,21 @@
-import AboutMe from "./AboutMe";
+import React from "react";
+import Head from "next/head";
+import ThreeDAnimation from "./components/ThreeDAnimation";
+import TextSection from "./components/TextSection/TextSection";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <AboutMe />
-    </div>
+    <>
+      <Head>
+        <title>Animation and Text Demo</title>
+      </Head>
+      <div style={{ height: "100vh", overflow: "hidden" }}>
+        <ThreeDAnimation />
+      </div>
+      <div style={{ height: "100vh" }}></div>
+      <TextSection />
+    </>
   );
-}
+};
+
+export default Home;

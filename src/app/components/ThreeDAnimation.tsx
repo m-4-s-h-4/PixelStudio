@@ -9,7 +9,7 @@ const ThreeDAnimation = () => {
   useEffect(() => {
     if (canvasRef.current) {
       const app = new Application(canvasRef.current);
-      app.load("https://prod.spline.design/iYrylDZEGmfFGsXB/scene.splinecode");
+      app.load("https://prod.spline.design/yiggVm2byMjtOQ7D/scene.splinecode");
     }
   }, []);
 
